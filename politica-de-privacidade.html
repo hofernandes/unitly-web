@@ -32,16 +32,19 @@
             border-bottom: 2px solid #e8f8f5;
         }
         .app-icon {
-            width: 72px;
-            height: 72px;
-            background: linear-gradient(135deg, #1ABC9C, #148F77);
-            border-radius: 18px;
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 36px;
+            width: 88px;
+            height: 88px;
+            border-radius: 22px;
+            display: inline-block;
             margin-bottom: 16px;
-            box-shadow: 0 6px 20px rgba(26, 188, 156, 0.35);
+            box-shadow: 0 6px 20px rgba(26, 188, 156, 0.40);
+            overflow: hidden;
+        }
+        .app-icon img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
         }
         .header h1 {
             font-size: 26px;
@@ -154,7 +157,9 @@
 
     <!-- Header -->
     <div class="header">
-        <div class="app-icon">🌍</div>
+        <div class="app-icon">
+            <img src="https://hofernandes.github.io/unitly-web/imagens/icone.png" alt="Unitly ícone">
+        </div>
         <h1>Política de Privacidade</h1>
         <div class="subtitle">UNITLY — O Canivete Suíço do Viajante Global</div>
         <div class="meta">
@@ -307,7 +312,7 @@
     <!-- Contato -->
     <div class="contact-card">
         <p>Dúvidas ou solicitações sobre privacidade? Entre em contato:</p>
-        <a href="mailto:higorofernandes@gmail.com">higorofernandes@gmail.com</a>
+        <a href="mailto:higor.oliveira.fernandes@gmail.com">higor.oliveira.fernandes@gmail.com</a>
     </div>
 
 </div>
