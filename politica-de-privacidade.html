@@ -24,7 +24,6 @@
             box-shadow: 0 4px 24px rgba(26, 188, 156, 0.12);
         }
 
-        /* Header */
         .header {
             text-align: center;
             margin-bottom: 40px;
@@ -65,7 +64,6 @@
             color: #888;
         }
 
-        /* Seções */
         h2 {
             color: #1A5276;
             font-size: 17px;
@@ -98,7 +96,6 @@
         }
         a:hover { text-decoration: underline; }
 
-        /* Cards de destaque */
         .highlight-box {
             background: #e8f8f5;
             border: 1px solid #a3e4d7;
@@ -120,7 +117,17 @@
             color: #7d6608;
         }
 
-        /* Badge de contato */
+        .info-box {
+            background: #eaf4fb;
+            border: 1px solid #aed6f1;
+            border-radius: 12px;
+            padding: 16px 20px;
+            margin: 16px 0;
+            font-size: 14px;
+            color: #1a5276;
+        }
+        .info-box strong { color: #1a5276; }
+
         .contact-card {
             background: linear-gradient(135deg, #1A5276, #1f618d);
             border-radius: 14px;
@@ -138,7 +145,6 @@
             margin-top: 8px;
         }
 
-        /* Footer */
         .footer {
             text-align: center;
             margin-top: 40px;
@@ -172,23 +178,23 @@
     <p>
         Esta Política de Privacidade descreve como o aplicativo <strong>Unitly</strong>
         trata as informações dos seus usuários. O Unitly é um aplicativo gratuito de
-        conversão universal voltado a viajantes internacionais, disponível para
-        Android e iOS.
+        conversão universal voltado a viajantes internacionais, disponível para Android e iOS.
     </p>
 
     <div class="highlight-box">
         <strong>Resumo direto ao ponto:</strong> o Unitly não coleta, armazena nem
         compartilha dados pessoais identificáveis. Nenhum cadastro ou login é
-        necessário para usar o aplicativo.
+        necessário para usar o aplicativo. A permissão de localização, quando solicitada,
+        é usada exclusivamente para exibir a temperatura local e nunca é armazenada.
     </div>
 
     <!-- 1. O que o app faz -->
     <h2>1. O que o Unitly oferece</h2>
-    <p>O Unitly é um conversor universal com 20 módulos independentes, todos funcionando offline (exceto o módulo de câmbio de moedas, que requer internet para atualizar as taxas):</p>
+    <p>O Unitly é um conversor universal com 20 módulos independentes, a maioria funcionando offline (exceto os módulos que dependem de internet para dados em tempo real):</p>
     <ul>
         <li>💱 Moedas e Câmbio em tempo real</li>
         <li>🕐 Fusos Horários</li>
-        <li>🌡️ Temperatura (Celsius, Fahrenheit, Kelvin)</li>
+        <li>🌡️ Temperatura — conversor e clima ao vivo por localização GPS ou cidade escolhida</li>
         <li>⚖️ Pesos e Distâncias</li>
         <li>👗 Roupas e Calçados (tabelas por país)</li>
         <li>🔌 Tomadas e Eletricidade (voltagem e tipos por país)</li>
@@ -196,7 +202,7 @@
         <li>⛽ Combustível e Consumo</li>
         <li>🍳 Culinária Internacional</li>
         <li>📡 Dados Digitais e Internet</li>
-        <li>🗺️ Coordenadas GPS</li>
+        <li>🗺️ Coordenadas GPS (conversor de formatos: DD, DMS, UTM)</li>
         <li>💸 Calculadora de Gorjeta</li>
         <li>📄 Tamanho de Papel e Documentos</li>
         <li>🔢 Números e Sistemas Numéricos</li>
@@ -204,15 +210,24 @@
         <li>🏅 Equipamentos Esportivos</li>
     </ul>
 
-    <!-- 2. Dados coletados -->
+    <!-- 2. Dados que NÃO coleta -->
     <h2>2. Dados que o Unitly NÃO coleta</h2>
     <p>O aplicativo <strong>não coleta</strong> nenhum dos seguintes dados:</p>
     <ul>
         <li>Nome, e-mail, telefone ou qualquer informação de identificação pessoal</li>
-        <li>Localização geográfica do dispositivo (o módulo de Coordenadas GPS é um conversor de formatos — não acessa o GPS do aparelho)</li>
         <li>Contatos, câmera, microfone ou fotos</li>
         <li>Histórico de navegação ou outros aplicativos instalados</li>
     </ul>
+
+    <div class="info-box">
+        <strong>Sobre localização:</strong> o módulo de Temperatura pode solicitar acesso
+        à localização do dispositivo para exibir o clima da sua posição atual. Essa
+        coordenada é enviada diretamente à API Open-Meteo para obter a temperatura —
+        <strong>o Unitly não armazena, registra nem processa essa informação</strong>.
+        A permissão é totalmente opcional; se negada, o restante do app continua
+        funcionando normalmente. O módulo de Coordenadas GPS é apenas um conversor de
+        formatos (DD ↔ DMS ↔ UTM) e <strong>não acessa o GPS do aparelho</strong>.
+    </div>
 
     <!-- 3. Armazenamento local -->
     <h2>3. Dados salvos localmente no dispositivo</h2>
@@ -227,6 +242,7 @@
         <li>Ordem personalizada dos módulos</li>
         <li>Módulos acessados recentemente</li>
         <li>Última taxa de câmbio obtida (para uso offline)</li>
+        <li>Cidades de fuso horário adicionadas pelo usuário</li>
     </ul>
     <p>
         Ao desinstalar o aplicativo, todos esses dados locais são apagados permanentemente
@@ -234,7 +250,7 @@
     </p>
 
     <!-- 4. API de câmbio -->
-    <h2>4. API de Câmbio de Moedas</h2>
+    <h2>4. API de Câmbio de Moedas — ExchangeRate-API</h2>
     <p>
         O módulo de Moedas e Câmbio realiza requisições ao serviço
         <a href="https://www.exchangerate-api.com" target="_blank">ExchangeRate-API</a>
@@ -248,8 +264,33 @@
         em <a href="https://www.exchangerate-api.com/privacy" target="_blank">exchangerate-api.com/privacy</a>.
     </div>
 
-    <!-- 5. Publicidade -->
-    <h2>5. Publicidade — Google AdMob</h2>
+    <!-- 5. API de Clima -->
+    <h2>5. API de Clima — Open-Meteo</h2>
+    <p>
+        O módulo de Temperatura utiliza o serviço gratuito e de código aberto
+        <a href="https://open-meteo.com" target="_blank">Open-Meteo</a> para exibir
+        temperaturas em tempo real. Duas APIs são utilizadas:
+    </p>
+    <ul>
+        <li>
+            <strong>api.open-meteo.com/v1/forecast</strong> — recebe coordenadas geográficas
+            (latitude e longitude) e retorna a temperatura atual. As coordenadas podem vir
+            do GPS do dispositivo (com sua permissão) ou de cidades pré-definidas no app.
+        </li>
+        <li>
+            <strong>geocoding-api.open-meteo.com/v1/search</strong> — recebe o nome de uma
+            cidade e retorna suas coordenadas. Usado como fallback para destinos não listados.
+        </li>
+    </ul>
+    <div class="warning-box">
+        Essas requisições incluem o endereço IP do dispositivo, conforme padrão de qualquer
+        comunicação de rede. O Unitly não armazena esses dados. A Open-Meteo é um serviço
+        sem fins lucrativos, sem rastreamento de usuários e sem necessidade de conta.
+        Saiba mais em <a href="https://open-meteo.com/en/terms" target="_blank">open-meteo.com/en/terms</a>.
+    </div>
+
+    <!-- 6. Publicidade -->
+    <h2>6. Publicidade — Google AdMob</h2>
     <p>
         O Unitly é gratuito e exibe anúncios por meio do <strong>Google AdMob</strong>.
         O AdMob pode coletar e utilizar automaticamente dados do dispositivo para
@@ -267,16 +308,25 @@
         <a href="https://policies.google.com/privacy" target="_blank">policies.google.com/privacy</a>
     </p>
 
-    <!-- 6. Permissões -->
-    <h2>6. Permissões do aplicativo</h2>
-    <p>O Unitly solicita apenas as permissões estritamente necessárias:</p>
+    <!-- 7. Permissões -->
+    <h2>7. Permissões do aplicativo</h2>
+    <p>O Unitly solicita apenas as permissões estritamente necessárias para seu funcionamento:</p>
     <ul>
-        <li><strong>Internet:</strong> necessária para buscar taxas de câmbio atualizadas e exibir anúncios AdMob.</li>
+        <li>
+            <strong>Internet:</strong> necessária para buscar taxas de câmbio atualizadas,
+            obter dados de clima em tempo real e exibir anúncios AdMob.
+        </li>
+        <li>
+            <strong>Localização (ACCESS_FINE_LOCATION / ACCESS_COARSE_LOCATION):</strong>
+            solicitada pelo módulo de Temperatura para exibir o clima da sua posição atual.
+            A permissão é <strong>opcional</strong> — você pode negar e o restante do app
+            continua funcionando normalmente. A localização nunca é armazenada pelo Unitly.
+        </li>
     </ul>
-    <p>O aplicativo <strong>não solicita</strong> permissões de localização, câmera, microfone, contatos, Bluetooth ou armazenamento externo.</p>
+    <p>O aplicativo <strong>não solicita</strong> permissões de câmera, microfone, contatos, Bluetooth ou armazenamento externo.</p>
 
-    <!-- 7. Crianças -->
-    <h2>7. Privacidade de crianças</h2>
+    <!-- 8. Crianças -->
+    <h2>8. Privacidade de crianças</h2>
     <p>
         O Unitly não é direcionado a crianças menores de 13 anos e não coleta
         conscientemente dados pessoais desse público. Caso seja identificado
@@ -284,8 +334,8 @@
         mediante solicitação.
     </p>
 
-    <!-- 8. LGPD/GDPR -->
-    <h2>8. Conformidade com LGPD e GDPR</h2>
+    <!-- 9. LGPD/GDPR -->
+    <h2>9. Conformidade com LGPD e GDPR</h2>
     <p>
         O Unitly respeita a <strong>Lei Geral de Proteção de Dados (LGPD — Lei nº 13.709/2018)</strong>
         e o <strong>Regulamento Geral de Proteção de Dados da União Europeia (GDPR)</strong>.
@@ -293,12 +343,12 @@
         de privacidade é mínima.
     </p>
     <p>
-        Os dados tratados pelo AdMob são de responsabilidade do Google LLC, que possui
-        sua própria conformidade com LGPD e GDPR.
+        Os dados tratados pelo AdMob, ExchangeRate-API e Open-Meteo são de responsabilidade
+        de cada respectivo serviço, que possuem suas próprias conformidades com LGPD e GDPR.
     </p>
 
-    <!-- 9. Alterações -->
-    <h2>9. Alterações nesta Política</h2>
+    <!-- 10. Alterações -->
+    <h2>10. Alterações nesta Política</h2>
     <p>
         Esta Política de Privacidade pode ser atualizada para refletir mudanças no
         aplicativo ou em requisitos legais. Recomendamos revisitá-la periodicamente.
@@ -306,7 +356,7 @@
     </p>
     <p>
         Esta versão foi publicada em <strong>junho de 2026</strong> e se aplica ao
-        Unitly versão <strong>1.0.0</strong> e superiores.
+        Unitly versão <strong>2.0.0</strong> e superiores.
     </p>
 
     <!-- Contato -->
